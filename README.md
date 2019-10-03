@@ -1,17 +1,22 @@
-﻿Anomaly Detection Using Financial Ratios
+Annual Report Readability
 ===================
 
 
-####Coding and testing the commercial applications of academic papers and cutting edge analytical techniques.
+#### Coding and testing the commercial applications of academic papers and cutting edge analytical techniques.
 ------------------------------------------------------------------------
 
-**Paper 1:** *A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise*
+**Paper 1:** *Annual Report Readability, Current Earnings, and Earnings Persistence*
 
-**Abstract:** Clustering algorithms are attractive for the task of class identification in spatial databases. However, the application to large spatial databases rises the following requirements for clustering algorithms: minimal requirements of domain knowledge to determine the input parameters, discovery of clusters with arbitrary shape and good efficiency on large databases. The well-known clustering algorithms offer no solution to the combination of these requirements. In this paper, we present the new clustering algorithm DBSCAN relying on a density-based notion of clusters which is designed to discover clusters of arbitrary shape. DBSCAN requires only one input parameter and supports the user in determining an appropriate value for it. We performed an experimental evaluation of the effectiveness and efficiency of DBSCAN using synthetic data and real data of the SEQUOIA 2000 benchmark. The results of our experiments demonstrate that (1) DBSCAN is significantly more effective in discovering clusters of arbitrary shape than the well-known algorithm CLAR-ANS, and that (2) DBSCAN outperforms CLARANS by a factor of more than 100 in terms of efficiency.
+**Abstract:** This paper examines the relationship between annual report readability and firm performance and earnings persistence. I find that the annual reports of firms with lower earnings are harder to read (i.e., they have higher Fog and are longer). Moreover, the positive earnings of firms with annual reports that are easier to read are more persistent. This suggests that managers may be opportunistically choosing the readability of annual reports to hide adverse information from investors.
 
-**Paper 2:** *Clustering-based Anomaly Detection for Microservices*
+**Paper 2:** *Lexical Tightness and Text Complexity*
 
-**Abstract:** Anomaly detection is an important step in the management and monitoring of data centers and cloud computing platforms. The ability to detect anomalous virtual machines before real failures occur results in reduced downtime while operations engineers urgently recover malfunctioning virtual machines, efficient root cause analysis, and improved customer optics in the event said malfunction lead to an outage. Virtual machines could fail at any time, whether in a lab or production system. If there is no anomaly detection system, and a virtual machine in a lab environment fails, the QA and DEV team will have to switch to another environment while the OPS team fixes the failure. The potential impact of failing to detect anomalous virtual machines can result in financial ramifications, both when developing new features and servicing existing ones. This paper presents a model that can efficiently detect anomalous virtual machines both in production and testing environments.
+**Abstract:** We present a computational notion of Lexical Tightness that measures global cohesion of content words in a text. Lexical tightness represents the degree to which a text tends to use words that are highly inter-associated in the language. We demonstrate the utility of this measure for estimating text complexity as measured by US school grade level designations of texts. Lexical tightness strongly correlates with grade level in a collection of expertly rated reading materials. Lexical tightness captures aspects of prose 
+complexity that are not covered by classic readability indexes, especially for literary texts. We also present initial findings on the utility of this measure for automated estimation of complexity for poetry.
+
+**Bonus Paper:** *Improving Pointwise Mutual Information (PMI) by Incorporating Significant Co-occurrence*
+
+**Abstract:** We design a new co-occurrence based word association measure by incorporating the concept of significant cooccurrence in the popular word association measure Pointwise Mutual Information (PMI). By extensive experiments with a large number of publicly available datasets we show that the newly introduced measure performs better than other co-occurrence based measures.
 
 ----------
 
@@ -19,9 +24,11 @@
 Documents
 -------------
 
-[A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise](https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf)
+[Annual Report Readability, Current Earnings, and Earnings Persistence](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=887382)
 
-[Clustering-based Anomaly Detection for Microservices](https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf)
+[Lexical Tightness and Text Complexity](https://www.aclweb.org/anthology/W13-1504.pdf)
+
+[Improving Pointwise Mutual Information (PMI) by Incorporating Significant Co-occurrence](https://arxiv.org/pdf/1307.0596.pdf)
 
 
 ----------
@@ -29,23 +36,12 @@ Documents
 
 Hypotheses
 -------------------
- - Financial ratios are good indicators of a business and its operations
- - DBSCAN algorithm will be effective at identifying clusters of differing density, size and shape
- - Points identified as 'noise' can be the basis for further analysis of potentially risky companies
+
 
 ----------
 
 Process
 -------------
-From paper 2, we note it is important to first separate the data into common domains to ensure we are comparing data points with common characteristics. In this case study on financial ratios, we are dividing our data into industries.
-
-image
-
-DBCAN can detect clusters of deferring size and shape by locating regions of high density that are separated from one another by regions of low density. The algorithm form clusters in the following way:
-
-*“A point **a** is density connected to a point **b** with respect to ϵ and MinPts, if there is a point **c** such that, both **a** and **b** are density reachable from **c** w.r.t. to ϵ and MinPts.”*
-
-image
 
 
 ----------
@@ -62,4 +58,5 @@ Next Steps
 
 Requirements
 --------------------
+
 ----------
