@@ -38,7 +38,7 @@ def pdf_extract(no_pdf, path):
 
     return pairs, unigrams
 
-def unigram_prob(tokens):
+def unigram_probability(tokens):
     #returns the unigram probability of each word in the corpus
     result = {}
     denom = len(tokens)
@@ -58,7 +58,7 @@ def pair_occurence(pairs):
 
     return result
 
-def pair_prob(pairs, occurence, no_pdf):
+def pair_probability(pairs, occurence, no_pdf):
     #return a dict of all a text pair combinations with their probability across the corpus
     output = {}
     for i in pairs:
@@ -78,11 +78,19 @@ def lexical_tightness(uni_prob, bi_prob, pairs, pdf):
         except:
             holding.append(0)
     return sum(holding)/len(holding)
+    
 
 if __name__ == '__main__':
 
     pdf_name = 'example{0}.pdf'
     no_pdf = 3
 
-    uni_prob = unigram_prob(unigrams)
-    bi_ouput = formatting(pairs)
+    pairs, unigram = pdf_extract(no_pdf, pdf_name)
+    uni_prob = unigram_probability(unigrams)
+
+    pair_occ = pair_occurence(pairs)
+    pair_prob = pair_probability(pairs, pair_occ, no_pdf)
+
+    for i in range(no_pdf):
+        result = []
+        result.append(lexical_tightness(uni_prob, pair_prob, pairs, i))
