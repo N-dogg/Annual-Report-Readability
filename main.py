@@ -58,10 +58,16 @@ def pair_occurence(pairs):
 
     return result
 
-def pair_prob(pair, occurence, pdf, no_pdf):
-    #returns the co-occurence probability
+def pair_prob(pairs, occurence, no_pdf):
+    #return a dict of all a text pair combinations with their probability across the corpus
+    output = {}
+    for i in pairs:
+        holding = []
+        for y in pairs[i]:
+            holding.append(occurence[y]/no_pdf)
+    output[i] = holding
 
-    return occurence[pdf][pair]/no_pdf
+    return output
 
 def lexical_tightness(uni_prob, bi_prob, pdf):
     #returns the lexical tightness (mean PNPMI) for a text
