@@ -62,19 +62,21 @@ def pair_prob(pairs, occurence, no_pdf):
     #return a dict of all a text pair combinations with their probability across the corpus
     output = {}
     for i in pairs:
-        holding = []
+        holding = {}
         for y in pairs[i]:
-            holding.append(occurence[y]/no_pdf)
-    output[i] = holding
+            holding[y] = occurence[y]/no_pdf
+        output[i] = holding
 
     return output
 
-def lexical_tightness(uni_prob, bi_prob, pdf):
+def lexical_tightness(uni_prob, bi_prob, pairs, pdf):
     #returns the lexical tightness (mean PNPMI) for a text
     holding = []
-    for i in range(len(bi_prob[pdf])):
-        holding.append((math.log2(bi_prob[i]/(uni_prob[i][0]*uni_prob[i][1]))) / (-math.log2(bi_prob[i])))
-
+    for i in range(len(pairs[pdf])):
+        try:
+            holding.append((math.log2(bi_prob[pdf][pairs[pdf][i]]/(uni_prob[pairs[pdf][i][0]]*uni_prob[pairs[pdf][i][1]]))) /(-math.log2(bi_prob[pdf][pairs[pdf][i]])))
+        except:
+            holding.append(0)
     return sum(holding)/len(holding)
 
 if __name__ == '__main__':
