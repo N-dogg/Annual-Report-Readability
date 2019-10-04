@@ -36,6 +36,8 @@ def pdf_extract(no_pdf, path):
         combo = list(combinations(set(unigrams), 2))
         pairs[y] = combo
 
+    return pairs, unigrams
+
 def unigram_prob(tokens):
     #returns the unigram probability of each word in the corpus
     result = {}
@@ -46,19 +48,13 @@ def unigram_prob(tokens):
 
     return result
 
-def formatting(pairs):
-    #returns a dictionary with the occurence score across the corpus for each text
-    result = {}
+def pair_occurence(pairs):
+    #return the occurence amount of each combination across all texts
+    holding = []
     for i in pairs:
-        holding = {}
-        for z in range(len(pairs[i])):
-            ticker = 0
-            for y in range(len(pairs)):
-                if y != i:
-                    if pairs[i][z] in pairs[y]:
-                        ticker += 1
-            holding[pairs[i][z]] = ticker
-    result[i] = holding
+        for y in pairs[i]:
+            holding.append(y)
+    result = Counter(holding)
 
     return result
 
