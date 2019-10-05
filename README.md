@@ -36,7 +36,11 @@ Documents
 
 Hypotheses
 -------------------
+Overall goal is to develop a solution that call analyse the relationship between financial statemet complexity and performance. The following are the projects hypotheses:
 
+- Lexical tightness, calculated by mean normalised point-wise mutual information(PMI), is a good indicator of text complexity
+- There is a correlation between text complexity and financial performance: percentage change in profit before tax.
+- Financial statements that exhibit higher complexity are associated with poorer performance.
 
 ----------
 
@@ -54,9 +58,16 @@ Example Results Screens
 
 Next Steps
 --------------------
+
 ----------
 
 Requirements
 --------------------
+PyPDF2  
+itertools  
+math  
+matplotlib  
+nltk  
+collections  
 
 ----------
