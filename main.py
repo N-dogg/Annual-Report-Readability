@@ -91,6 +91,6 @@ if __name__ == '__main__':
     pair_occ = pair_occurence(pairs)
     pair_prob = pair_probability(pairs, pair_occ, no_pdf)
 
+    result = []
     for i in range(no_pdf):
-        result = []
         result.append(lexical_tightness(uni_prob, pair_prob, pairs, i))
