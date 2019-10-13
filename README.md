@@ -71,7 +71,7 @@ Lexical tightness (LT) represents the degree to which a text tends to use words 
 
 We note initially positive results from our testing with visual confirmation that the years where the percentage change in profit before tax was higher, corresponded to higher values of LT.
 
-![Capture](https://user-images.githubusercontent.com/43980002/66722754-4e079600-ee5d-11e9-9537-4b5eafce8982.PNG)
+![Capture3](https://user-images.githubusercontent.com/43980002/66723463-2288a980-ee65-11e9-871f-91351d992d9b.PNG)
 
 ----------
 
