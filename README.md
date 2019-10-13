@@ -36,9 +36,9 @@ Documents
 
 Hypotheses
 -------------------
-Overall goal is to develop a solution that call analyse the relationship between financial statemet complexity and performance. The following are the projects hypotheses:
+Overall goal is to develop a solution that can analyse the relationship between financial statement complexity and performance. The following are the projects hypotheses:
 
-- Lexical tightness, calculated by mean normalised point-wise mutual information(PMI), is a good indicator of text complexity
+- Lexical tightness, calculated by mean normalised point-wise mutual information (PMI), is a good indicator of text complexity
 - There is a correlation between text complexity and financial performance: percentage change in profit before tax.
 - Financial statements that exhibit higher complexity are associated with poorer performance.
 
@@ -47,7 +47,9 @@ Overall goal is to develop a solution that call analyse the relationship between
 Process
 -------------
 Begin by importing and extracting all text from each PDF to create a corpus. Then proceed to lemmatize each word and remove 'stop-words'
-For this round of experimentation we have only compared financial statments from the same company accross time. Noting that the process is memory intensive with the amount of pairs needing to be held represented by the following equation.
+For this round of experimentation we have only compared financial statments from the same company accross time. Noting that domain specific words will vary across companies, potentially skewing results. 
+
+The process is also memory intensive with the amount of pairs needing to be held represented by the following equation.
 
 ![2](https://user-images.githubusercontent.com/43980002/66722781-86a76f80-ee5d-11e9-9ac2-fe08ce799ef8.PNG)
 
