@@ -94,3 +94,7 @@ if __name__ == '__main__':
     result = []
     for i in range(no_pdf):
         result.append(lexical_tightness(uni_prob, pair_prob, pairs, i))
+        
+    returns = []
+    plt.plot(returns, results, '*')
+    plt.show()
