@@ -46,16 +46,27 @@ Overall goal is to develop a solution that call analyse the relationship between
 
 Process
 -------------
-TBC
+Begin by importing and extracting all text from each PDF to create a corpus. Then proceed to lemmatize each word and remove 'stop-words'
+For this round of experimentation we have only compared financial statments from the same company accross time. Noting that the process is memory intensive with the amount of pairs needing to be held represented by the following equation.
+
+![2](https://user-images.githubusercontent.com/43980002/66722781-86a76f80-ee5d-11e9-9ac2-fe08ce799ef8.PNG)
+
+Once the corpus has been created we can calculate the unigram and pair-wise probability. Using these two dictionaries, the caluclation for each pairs normalised PMI is calculated using the following formula.
 
 ![Capture](https://user-images.githubusercontent.com/43980002/66356511-e235b100-e9b6-11e9-9fb3-27508110900c.JPG)
+
+A financial statments lexical tightness is the mean value of all the pairs normalised PMI for that statment.
+
+We finally plot lexical tighness against the percentage in profit before tax to access our results.
+
 
 ----------
 
 
 Example Results Screens
 --------------------
-TBC
+
+![Capture](https://user-images.githubusercontent.com/43980002/66722754-4e079600-ee5d-11e9-9537-4b5eafce8982.PNG)
 
 ----------
 
