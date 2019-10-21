@@ -17,7 +17,7 @@ unigrams = []
 pairs = {}
 
 def pdf_extract(no_pdf, path):
-    #returns a list of unigrams for the corpus and a dict of combinations for each text
+    #returns a cleaned list of unigrams for the corpus and a dict of combinations for each text
     for y in range(no_pdf):
         path = pdf_name.format(y)
         pdfFileObj = open(path, 'rb')
