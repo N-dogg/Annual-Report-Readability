@@ -83,7 +83,7 @@ def lexical_tightness(uni_prob, bi_prob, pairs, pdf):
 if __name__ == '__main__':
 
     pdf_name = 'example{0}.pdf'
-    no_pdf = 3
+    no_pdf = 6
 
     pairs, unigram = pdf_extract(no_pdf, pdf_name)
     uni_prob = unigram_probability(unigrams)
