@@ -1,6 +1,0 @@
-PyPDF2
-itertools
-math
-matplotlib
-nltk
-collections
