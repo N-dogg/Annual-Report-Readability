@@ -12,7 +12,7 @@ Annual Report Readability
 **Paper 2:** *Lexical Tightness and Text Complexity*
 
 **Abstract:** We present a computational notion of Lexical Tightness that measures global cohesion of content words in a text. Lexical tightness represents the degree to which a text tends to use words that are highly inter-associated in the language. We demonstrate the utility of this measure for estimating text complexity as measured by US school grade level designations of texts. Lexical tightness strongly correlates with grade level in a collection of expertly rated reading materials. Lexical tightness captures aspects of prose 
-complexity that are not covered by classic readability indexes, especially for literary texts. We also present initial findings on the utility of this measure for automated estimation of complexity for poetry.
+complexity that are not covered by classic readability indexes, especially for literary texts.
 
 **Bonus Paper:** *Improving Pointwise Mutual Information (PMI) by Incorporating Significant Co-occurrence*
 
@@ -46,7 +46,7 @@ Overall goal is to develop a solution that can analyse the relationship between 
 
 Process
 -------------
-Begin by importing and extracting all text from each PDF to create a corpus. Then proceed to lemmatize each word and remove 'stop-words'
+Begin by importing and extracting all text from each PDF to create a corpus. Proceed to lemmatize each word and remove 'stop-words'
 For this round of experimentation we have only compared financial statments from the same company accross time. Noting that domain specific words will vary across companies, potentially skewing results. 
 
 The process is also memory intensive with the amount of pairs needing to be held represented by the following equation.
