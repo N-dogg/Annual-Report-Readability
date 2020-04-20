@@ -2,7 +2,6 @@ import PyPDF2
 from itertools import combinations
 import math
 import matplotlib.pyplot as plt
-
 import nltk
 from nltk.util import ngrams
 from nltk.stem import WordNetLemmatizer
@@ -17,7 +16,7 @@ unigrams = []
 pairs = {}
 
 def pdf_extract(no_pdf, path):
-    #returns a cleaned list of unigrams for the corpus and a dict of combinations for each text
+    #returns a cleaned list of unigrams for the corpus and a dict of combinations for each text - inefficient
     for y in range(no_pdf):
         path = pdf_name.format(y)
         pdfFileObj = open(path, 'rb')
