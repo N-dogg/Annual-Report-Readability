@@ -68,7 +68,7 @@ Example Results Screens
 --------------------
 Lexical tightness (LT) represents the degree to which a text tends to use words that are highly inter-associated in the language. The papers posit that lexically tight texts (higher values of LT) are easier to read and thus should correspond to higher return values.
 
-We note initially positive results from our testing with visual confirmation that the years where the percentage change in profit before tax was higher, corresponded to higher values of LT.
+We note initially positive (not amazing) results from our testing with visual confirmation that the years where the percentage change in profit before tax was higher, corresponded to higher values of LT.
 
 ![Capture3](https://user-images.githubusercontent.com/43980002/66723501-99be3d80-ee65-11e9-942c-bdceb00b5b9a.PNG)
 
